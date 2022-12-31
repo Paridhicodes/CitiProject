@@ -24,7 +24,7 @@ body, html {
   background-size: cover;
   background-position: center;
   background-size: cover;
-  background-image: url(static/house1.jpg);
+  background-image: url(static/main.jpg);
   min-height: 100%;
 }
 
@@ -42,8 +42,9 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
-      <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
       <a href="{{ url_for('news') }}" class="w3-bar-item w3-button"> NEWS</a>
+      <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
+      <a href="{{ url_for('report') }}" class="w3-bar-item w3-button"> REPORT</a>
       <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -58,23 +59,18 @@ body, html {
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">CLOSE ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-<<<<<<< HEAD
-  <!-- <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button">FEATURES</a> -->
-  <a href="{{ url_for('news') }}" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
-  <!-- <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
-=======
-  <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
   <a href="{{ url_for('news') }}" onclick="w3_close()" class="w3-bar-item w3-button">App</a>
->>>>>>> fd46c696bbaebdecad810624f73b89ac08a84db2
+  <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
+  <a href="{{ url_for('report') }}" class="w3-bar-item w3-button"> REPORT</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-grey" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Always stay updated with the latest market trends.</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Always stay updated with the latest market trends.</span><br>
-    <span class="w3-large">Make quicker and more productive trading decisions through live market insights. </span>
+<header class="bgimg-1 w3-display-container w3-text-black w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-black" style="padding:48px">
+    <span class="w3-text-white w3-jumbo w3-hide-small">Always stay updated with the latest market trends.</span><br>
+    <span class="w3-text-white w3-xxlarge w3-hide-large w3-hide-medium">Always stay updated with the latest market trends.</span><br>
+    <span class="w3-text-white w3-large">Make quicker and more productive trading decisions through live market insights. </span>
     <p><a href="{{ url_for('news') }}" class="w3-button w3-grey w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><strong>Live Updates</strong></a></p>
   </div> 
 </header>
@@ -89,7 +85,7 @@ body, html {
       <p><a href="{{ url_for('news')}}" class="w3-button w3-black"><i class="fa fa-th"> </i> Check Live Updates</a></p>
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-hide-small w3-hide-medium w3-round-large" src="/static/safeHome.png" alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-hide-small w3-hide-medium w3-round-large" src="/static/about_us.jpg" alt="Buildings" width="700" height="394">
     </div>
   </div>
 </div>
@@ -129,19 +125,6 @@ body, html {
     <p class="w3-col m6"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: riddhichaudhary15@gmail.com</p>
     <p class="w3-col m6"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: paridhijain0201@gmail.com</p>
     <br>
-    <!-- <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form> -->
-    <!-- Image of location/map -->
-    <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
   </div>
 </div>
 

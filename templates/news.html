@@ -62,11 +62,15 @@
         <div class="w3-right w3-hide-small">
           <!-- <a href="index.html#about" class="w3-bar-item w3-button"> ABOUT</a> -->
 
+          
+          <a href="{{ url_for('news') }}" class="w3-bar-item w3-button">
+            NEWS</a
+          >
           <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button">
             STOCKS</a
           >
-          <a href="{{ url_for('news') }}" class="w3-bar-item w3-button">
-            NEWS</a
+          <a href="{{ url_for('report') }}" class="w3-bar-item w3-button">
+            REPORT</a
           >
           <!-- <a href="index.html#contact" class="w3-bar-item w3-button"> CONTACT</a> -->
         </div>
@@ -94,20 +98,18 @@
         class="w3-bar-item w3-button w3-large w3-padding-16"
         >CLOSE ×</a
       >
-      <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button"
-        >ABOUT</a
-      >
-      <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button">
-        STOCKS</a
-      >
+      
       <a
         href="{{ url_for('news') }}"
         onclick="w3_close()"
         class="w3-bar-item w3-button"
-        >App</a
+        >NEWS</a
       >
-      <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button"
-        >CONTACT</a
+      <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button">
+        STOCKS</a
+      >
+      <a href="{{ url_for('report') }}" class="w3-bar-item w3-button">
+        REPORT</a
       >
     </nav>
 
