@@ -62,5 +62,7 @@ def stocks():
     df=df[['symbol','open','dayHigh', 'dayLow','lastPrice','totalTradedVolume','totalTradedValue','perChange30d']]
     return render_template('stocks.html',  tables=[df.to_html(classes='data')], titles=[' ',' ','symbol','open','dayHigh', 'dayLow','lastPrice','totalTradedVolume','totalTradedValue','perChange30d'])
 
+
+
 if __name__ == "__main__":
     app.run(debug=True)
