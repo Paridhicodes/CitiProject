@@ -13,14 +13,13 @@
    <li><a href="#features-description">Features Description</a></li>
       <ul>
         <li><a href="#live-news">NSE Related Live News</a></li>
-        <li><a href="#stocks">NSE 200 Constituents</a></li>
-        <li><a href="#report">Index Level Reporting</a></li>
+        <li><a href="#nse-200-constituents">NSE 200 Constituents</a></li>
+        <li><a href="#index-level-reporting">Index Level Reporting</a></li>
       </ul>
    <li><a href="#home-page">Home Page</a></li>
       <ul>
         <li><a href="#landing-page">Landing Page</a></li>
         <li><a href="#about-section">About Section</a></li>
-        <li><a href="#features-section">Features Section</a></li>
       </ul>
   </ol>
 </details>
