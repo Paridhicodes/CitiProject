@@ -38,11 +38,11 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-wide">safeHome</a>
+    <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-wide">StockSmart</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
-      <a href="#features" class="w3-bar-item w3-button"> FEATURES</a>
+      <!-- <a href="#features" class="w3-bar-item w3-button"> FEATURES</a> -->
       <a href="{{ url_for('news') }}" class="w3-bar-item w3-button"> NEWS</a>
       <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
     </div>
@@ -58,8 +58,8 @@ body, html {
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">CLOSE ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button">FEATURES</a>
-  <a href="{{ url_for('news') }}" onclick="w3_close()" class="w3-bar-item w3-button">App</a>
+  <!-- <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button">FEATURES</a> -->
+  <a href="{{ url_for('news') }}" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
   <!-- <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -67,10 +67,10 @@ body, html {
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-grey" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Keep your home secure, always</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Keep your home secure, always</span><br>
-    <span class="w3-large">Ensure 24x7 security of your home with us, while you remain stress free.</span>
-    <p><a href="{{ url_for('news') }}" class="w3-button w3-grey w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><strong>Start Now</strong></a></p>
+    <span class="w3-jumbo w3-hide-small">Always stay updated with the latest market trends.</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Always stay updated with the latest market trends.</span><br>
+    <span class="w3-large">Make quicker and more productive trading decisions through live market insights. </span>
+    <p><a href="{{ url_for('news') }}" class="w3-button w3-grey w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><strong>Live Updates</strong></a></p>
   </div> 
 </header>
 
@@ -79,9 +79,9 @@ body, html {
   <div class="w3-row-padding">
     <div class="w3-col m12 l6">
       <h3>About Us</h3>
-      <p>At safeHome, we understand the fear one may feel to leave home even for a couple of hours in the current times when news of crimes with no one at home has become so common. Thus, our objective is to ensure safety of the home at all times.</p>
-      <p>This is achieved through the leveraging the power of modern technology to revolutionize our living.</p>
-      <p><a href="{{ url_for('news')}}" class="w3-button w3-black"><i class="fa fa-th"> </i> Start Now</a></p>
+      <p>With StockSmart, all the key highlights related to the stock market are now just a click away. Important information related to NSE 200 Index constituents, sectors and index level reporting are delivered to help you analyse the market status. We provide live insights on the current market trends to assist you in wisely trading between stocks. </p>
+      <p>Thus, our objective is to help sales traders make profitable decisions with the help of the insights delivered at the start of the trading day..</p>
+      <p><a href="{{ url_for('news')}}" class="w3-button w3-black"><i class="fa fa-th"> </i> Check Live Updates</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-hide-small w3-hide-medium w3-round-large" src="/static/safeHome.png" alt="Buildings" width="700" height="394">
@@ -90,7 +90,7 @@ body, html {
 </div>
 
 <!-- Features Section -->
-<div class="w3-container" style="padding:128px 16px" id="features">
+<!-- <div class="w3-container" style="padding:128px 16px" id="features">
   <h3 class="w3-center">Features</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
@@ -114,16 +114,15 @@ body, html {
       <p>Offers a feature to switch to either home mode or away mode, depending on whether owners are at home.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<div class="w3-center w3-container w3-light-grey" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Let's get in touch. Send us a message:</p>
   <div style="margin-top:48px">
-    <p class="w3-col m4"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Delhi, India</p>
-    <p class="w3-col m4"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 977xxxxxxx</p>
-    <p class="w3-col m4"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: safeHome.official@gmail.com</p>
+    <p class="w3-col m6"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: riddhichaudhary15@gmail.com</p>
+    <p class="w3-col m6"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: paridhijain0201@gmail.com</p>
     <br>
     <!-- <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -144,7 +143,7 @@ body, html {
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Copyright © 2022 <a href="#home" title="safeHome" target="_blank" class="w3-hover-text-grey">safeHome</a></p>
+  <p>Copyright © 2022 <a href="#home" title="StockSmart" target="_blank" class="w3-hover-text-grey">StockSmart</a></p>
 </footer>
  
 <script>

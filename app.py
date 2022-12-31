@@ -23,8 +23,8 @@ def news():
     # past_dt = date.today()
     past_dt = past_dt.isoformat()
     top_headlines = newsapi.get_everything(
-                                        q = 'Nifty 200 Index',
-                                        qintitle='NSE 200',
+                                        q = 'Nifty',
+                                        qintitle='NSE',
                                         language='en',
                                         from_param=past_dt,
                                         to=current_dt,
@@ -38,7 +38,7 @@ def news():
     author = []
     p_date = []
     url = []
-
+    print(len(articles))
     for i in range(len(articles)):
         myarticles = articles[i]
 
