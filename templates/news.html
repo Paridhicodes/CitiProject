@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>StockSmart</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-        
-        body, html {
-          height: 100%;
-          line-height: 1.8;
-        }
-        
-        /* Full height image header */
-        .bgimg-1 {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-image: url(static/house1.jpg);
-          min-height: 100%;
-        }
-        
-        .w3-bar .w3-button {
-          padding: 16px;
-        }
-        </style>
-</head>
-<body>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Raleway", sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        line-height: 1.8;
+      }
+
+      /* Full height image header */
+      .bgimg-1 {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(static/house1.jpg);
+        min-height: 100%;
+      }
+
+      .w3-bar .w3-button {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
     <div class="w3-top">
+<<<<<<< HEAD
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-wide">StockSmart</a>
           <!-- Right-sided navbar links -->
@@ -47,41 +69,122 @@
           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
           </a>
+=======
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-wide"
+          >safeHome</a
+        >
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
+          <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button">
+            STOCKS</a
+          >
+          <a href="{{ url_for('news') }}" class="w3-bar-item w3-button">
+            NEWS</a
+          >
+          <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+>>>>>>> fd46c696bbaebdecad810624f73b89ac08a84db2
         </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-<div class="jumbotron" style="color:black">
-
-    <h1 style="color:black; padding-top:30px; text-align:center">
-
-        Live Updates from NSE
-
-    </h1>
-
-</div>
-
-
-<div class="container-fluid landing">
-    <div class="row">
-        {% for source, news_title, desc, author, img, p_date, url in context %}
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card mb-3 bg-dark text-white">
-                <img src="{{ img }}" class="card-img image-fluid" alt="...">
-                <div class="card-body">
-                    <p class="card-text source">{{ source.name }}</p>
-                    <a href="{{ url }}">
-                        <h2 class="card-title"><b> {{ title }} </b></h2>
-                    </a>
-                    <p class="card-text">{{ desc }}</p>
-                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg> Author: {{ author }}</p>
-                </div>
-                <div class="card-footer">
-                    <p class="card-text published"><svg class="p-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)"><path d="M12 5c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path><path d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z"></path></svg> Date Published: {{ p_date }}</p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
     </div>
-</div>
 
-</body>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >CLOSE ×</a
+      >
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+      <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button">
+        STOCKS</a
+      >
+      <a
+        href="{{ url_for('news') }}"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >App</a
+      >
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"
+        >CONTACT</a
+      >
+    </nav>
+
+    <div class="jumbotron" style="color: black">
+      <h1 style="color: black; padding-top: 30px; text-align: center">
+        Live Updates from NSE
+      </h1>
+    </div>
+
+    <div class="container-fluid landing">
+      <div class="row">
+          {% for source, news_title, desc, author, img, p_date, url in
+          context %}
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card mb-3 bg-dark text-white">
+              <img src="{{ img }}" class="card-img image-fluid" alt="..." />
+              <div class="card-body">
+                <p class="card-text source">{{ source.name }}</p>
+                <a href="{{ url }}">
+                  <h2 class="card-title"><b> {{ title }} </b></h2>
+                </a>
+                <p class="card-text">{{ desc }}</p>
+                <p class="card-text">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(255, 255, 255, 1)"
+                  >
+                    <path
+                      d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"
+                    ></path>
+                  </svg>
+                  Author: {{ author }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <p class="card-text published">
+                  <svg
+                    class="p-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(255, 255, 255, 1)"
+                  >
+                    <path
+                      d="M12 5c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"
+                    ></path>
+                    <path
+                      d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z"
+                    ></path>
+                  </svg>
+                  Date Published: {{ p_date }}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </body>
 </html>
