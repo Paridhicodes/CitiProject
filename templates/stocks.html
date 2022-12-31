@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StockSmart</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+        
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(static/house1.jpg);
+          min-height: 100%;
+        }
+        
+        .w3-bar .w3-button {
+          padding: 16px;
+        }
+
+        .row{
+            margin: auto;
+            width: 50%;
+        }
+        table.dataframe, .dataframe th, .dataframe td {
+            border: none;
+            border-bottom: 1px solid #C8C8C8;
+            border-collapse: collapse;
+            text-align:left;
+            padding: 10px;
+            margin-bottom: 40px;
+            font-size: 1em;
+            align-items:center;
+          }
+        </style>
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-wide">safeHome</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button"> ABOUT</a>
+        <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
+        <a href="{{ url_for('news') }}" class="w3-bar-item w3-button"> NEWS</a>
+        <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">CLOSE ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="{{ url_for('stocks') }}" class="w3-bar-item w3-button"> STOCKS</a>
+    <a href="{{ url_for('news') }}" onclick="w3_close()" class="w3-bar-item w3-button">App</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+<div class="jumbotron" style="color:black">
+
+    <h1 style="color:black; padding-top:30px; text-align:center">
+
+        NSE Stocks Information
+
+    </h1>
+
+</div>
+
+
+<div class="container-fluid landing">
+    <div class="row">
+        {% for table in tables %}
+        {{titles[loop.index]}}
+        {{ table|safe }}
+{% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
