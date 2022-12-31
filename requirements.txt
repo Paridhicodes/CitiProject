@@ -1,0 +1,6 @@
+flask
+newsapi-python
+datetime
+pandas
+nsepython
+nsepy

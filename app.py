@@ -61,12 +61,14 @@ def stocks():
     positions = nsefetch('https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F%26O')
     df=pd.DataFrame(positions['data'])
     df=df[['symbol','open','dayHigh', 'dayLow','lastPrice','totalTradedVolume','totalTradedValue','perChange30d']]
-    return render_template('stocks.html',  tables=[df.to_html(classes='data')], titles=[' ',' ','symbol','open','dayHigh', 'dayLow','lastPrice','totalTradedVolume','totalTradedValue','perChange30d'])
+    return render_template('stocks.html',  tables=[df.to_html(classes='data')], titles=[])
 
 @app.route('/report')
 def report():
     #Market highlights, status, turnover, open interest
     #highlights
+    import datetime
+
     current_dt = datetime.datetime.now().replace(microsecond = 0)
     past_dt = current_dt - \
                         timedelta(hours = 24)
@@ -76,17 +78,24 @@ def report():
 
     #mkt status
     market_status = (nse_marketStatus())
-    market_status = pd.DataFrame.from_dict(market_status)
+    market_status = pd.DataFrame(market_status['marketState']).iloc[:,:8]
 
     #market turnover
+        
     nifty = get_history(symbol="NIFTY", 
-                    start=past_dt, 
-                    end=current_dt,
-					index=True)
+                        start=past_dt, 
+                        end=current_dt,
+                        index=True)
+
     bnifty = get_history(symbol="BANKNIFTY", 
-                    start=past_dt, 
-                    end=current_dt,
-					index=True)
+                        start=past_dt, 
+                        end=current_dt,
+                        index=True)
+
+    mkt_turnover=pd.concat([nifty,bnifty])
+
+
+    import datetime
     end_date_avg = date.today()
     start_date_avg=(datetime.datetime.now()- datetime.timedelta(30)).date()
     nifty_avg = get_history(symbol="NIFTY", 
@@ -100,9 +109,11 @@ def report():
                         end=end_date_avg,
                         index=True)
     avg_30_banknifty=bnifty_avg['Volume'].sum()/30.0
-    data={'Product':['Nifty Index','BankNifty Index'],'Volume':[nifty,bnifty],'30D Avg':[avg_30_nifty,avg_30_banknifty]}
-    mkt_turnover=pd.DataFrame(data)
 
+    mkt_turnover['30D Avg']=[avg_30_nifty,avg_30_banknifty]
+    mkt_turnover.insert(loc=0,column='Category',value=['Nifty Index','BankNifty Index'])
+
+ 
     #open-interest options snapshot
     oi_data,ltp,crontime=oi_chain_builder('NIFTY')
     maxVal=oi_data.max()
