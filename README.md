@@ -9,7 +9,7 @@
     <li>
       <a href="#objective-behind-the-project">Objective behind the Project</a>
     </li>
-   <li><a href = "#features">Features</a></li>
+<!--    <li><a href = "#features">Features</a></li> -->
    <li><a href="#features-description">Features Description</a></li>
       <ul>
         <li><a href="#live-news">NSE Related Live News</a></li>
@@ -63,8 +63,8 @@ With StockSmart, all the key highlights related to the stock market are now just
 
 Thus, our objective is to help sales traders make profitable decisions with the help of the insights delivered at the start of the trading day.
 
-## Features
-Some of the features included in this app are:
+<!-- ## Features
+Some of the features included in this app are: -->
 
 ## Features Description
 
