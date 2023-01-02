@@ -34,7 +34,10 @@ def news():
                                         sort_by='relevancy',
                                        )
     articles = top_headlines['articles']
- 
+
+    if(len(articles)>9):
+        articles = articles[:9]
+    
     desc = []
     news_title = []
     img = []
