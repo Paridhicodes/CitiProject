@@ -44,6 +44,18 @@
             font-size: 1em;
             align-items:center;
           }
+
+          .d4, .d1, .d5{
+            margin-left:25%;
+          }
+
+          .d3{
+            margin-left:5%;
+          }
+          .head-table{
+            padding-bottom: 10px;
+            padding-top: 50px;
+          }
         </style>
 </head>
 <body>
@@ -85,11 +97,12 @@
     </h1>
 
 </div>
+<p style="padding-left:50px;">*All the values in Indian Rupee Thousands only</p>
 <div class="container-fluid landing">
     <div class="row">
       <div class="w3-col">
         {%  for table in tables %}
-        <h2 style="text-align: center;">{{  titles[loop.index]  }}</h2>
+        <u><h2 class="head-table" style="text-align: center;">{{  titles[loop.index]  }}</h2></u>
         {{  table|safe }}
         {%  endfor %}
         </div>

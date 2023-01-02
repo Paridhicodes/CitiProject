@@ -6,7 +6,9 @@ from nsepython import *
 from nsepy import get_history
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
@@ -15,7 +17,7 @@ def index():
 @app.route('/news')
 def news():
     # /v2/top-headlines
-    print("display news function reached")
+
     newsapi = NewsApiClient(api_key='4bfc19983cfc4f68badcdad72cdcc71d')
     current_dt = datetime.datetime.now().replace(microsecond = 0)
     past_dt = current_dt - \
@@ -32,7 +34,7 @@ def news():
                                         sort_by='relevancy',
                                        )
     articles = top_headlines['articles']
-    print(len(articles))
+ 
     desc = []
     news_title = []
     img = []
@@ -40,7 +42,7 @@ def news():
     author = []
     p_date = []
     url = []
-    print(len(articles))
+
     for i in range(len(articles)):
         myarticles = articles[i]
 

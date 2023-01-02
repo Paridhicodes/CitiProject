@@ -57,6 +57,11 @@ pip install -r requirements.txt
 flask run
 ```
 
+Run the flask run CLI command with debug mode enabled, which will automatically enable the reloader. As of Flask 2.2, you can pass --app and --debug options on the command line.
+```
+$ flask --app main.py --debug run
+```
+
 ## Objective Behind the Project
 
 With StockSmart, all the key highlights related to the stock market are now just a click away. Important information related to NSE 200 Index constituents, sectors and index level reporting are delivered to help you analyse the market status. We provide live insights on the current market trends to assist you in wisely trading between stocks.
@@ -83,8 +88,10 @@ List of all stocks in NSE 200 index
 
 ### Index Level Reporting
 
-![Screenshot (448)](https://user-images.githubusercontent.com/58457452/210134937-a70869af-76c4-4771-8060-f7da49c57815.png)
-![Screenshot (449)](https://user-images.githubusercontent.com/58457452/210134934-81fb202d-fe89-4193-bc2b-e65f75f4e4be.png)
+![Screenshot 2023-01-02 223802](https://user-images.githubusercontent.com/83594113/210261563-26178de3-b9ee-44ec-9769-ca4fbb366f50.jpg)
+![Screenshot 2023-01-02 223836](https://user-images.githubusercontent.com/83594113/210261602-ef9ebf44-2288-4c8a-90f5-fee5f7861497.jpg)
+![Screenshot 2023-01-02 223857](https://user-images.githubusercontent.com/83594113/210261614-ef30bd60-997c-421d-b588-4d331c6ded91.jpg)
+
 
 ## Home Page
 
