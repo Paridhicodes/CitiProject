@@ -1,4 +1,5 @@
-# CitiProject
+# stocksmart 
+<h4><i>Live News and Report from NSE</i></h4>
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
@@ -21,6 +22,7 @@
         <li><a href="#landing-page">Landing Page</a></li>
         <li><a href="#about-section">About Section</a></li>
       </ul>
+    <li><a href="#future-scope">Future Scope</a></li>
   </ol>
 </details>
 
@@ -101,4 +103,14 @@ List of all stocks in NSE 200 index
 
 ### About Section
 
-![Screenshot (450)](https://user-images.githubusercontent.com/58457452/210135240-3b233e19-681f-49f7-979f-e6432f7ca5d6.png)
+![about-us](https://user-images.githubusercontent.com/58457452/210272075-60a38d8f-ba9b-41d6-af59-c4a1c89dde24.png)
+
+## Future Scope
+
+1. <u>Implementation of email feature</u>: We can implement the email feature with a input field where the user can enter their email address and upon clicking send the entire report his recieved by them on their email. Presently, the smtp feature by gmail has been disabled, hence we couldn't add this feature. We aim to look at other alternatives and work on it.
+
+2. <u>Fetch and display more data</u>: Additional data can be fetched from the web using advanced scrapping techniques. We tried BeautifulSoup on many websites, but due to the sensitive nature of trading data, we couldn't fetch the data. We aim to work upon it as well.
+
+3. <u> Chatbot-feature</u>: A chatbot integration makes the website user-friendly and gives them a personalized experience. A chatbot can definitely help with basic question and a walk through the web pages.
+
+<h4>Link to the website: <a href="http://stocksmart.pythonanywhere.com/">stocksmart</a></h4>
