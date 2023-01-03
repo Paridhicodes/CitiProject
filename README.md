@@ -107,10 +107,10 @@ List of all stocks in NSE 200 index
 
 ## Future Scope
 
-1. <u>Implementation of email feature</u>: We can implement the email feature with a input field where the user can enter their email address and upon clicking send the entire report his recieved by them on their email. Presently, the smtp feature by gmail has been disabled, hence we couldn't add this feature. We aim to look at other alternatives and work on it.
+1. <u>Implementation of email feature</u>: We can implement the email feature with an input field where the user can enter their email address and upon clicking send the entire report is received by them on their email. Presently, the smtp feature by gmail has been disabled, hence we couldn't add this feature. We aim to look at other alternatives and work on it.
 
-2. <u>Fetch and display more data</u>: Additional data can be fetched from the web using advanced scrapping techniques. We tried BeautifulSoup on many websites, but due to the sensitive nature of trading data, we couldn't fetch the data. We aim to work upon it as well.
+2. <u>Fetch and display more data</u>: Additional data can be fetched from the web using advanced scraping techniques. We tried BeautifulSoup on many websites, but due to the sensitive nature of trading data, we couldn't fetch the data. We aim to work upon it as well.
 
-3. <u> Chatbot-feature</u>: A chatbot integration makes the website user-friendly and gives them a personalized experience. A chatbot can definitely help with basic question and a walk through the web pages.
+3. <u> Chatbot-feature</u>: A chatbot integration makes the website user-friendly and gives them a personalized experience. A chatbot can definitely help with basic questions and a walk through the web pages.
 
 <h4>Link to the website: <a href="http://stocksmart.pythonanywhere.com/">stocksmart</a></h4>
